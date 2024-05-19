@@ -1,6 +1,23 @@
 body {
   box-sizing: border-box;
 }
+h2 {
+  margin: 0;
+}
+body > article {
+  width: 800px;
+  height: fit-content;
+}
+span {
+  width: 100%;
+  height: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+}
+
 section {
   margin: auto;
   max-width: 730px;
@@ -9,17 +26,14 @@ section {
   flex-wrap: wrap;
   padding: 20px;
 }
-h2 {
-  margin-bottom: 0;
-  font-size: 30px;
-}
+
 article {
   display: flex;
   flex-direction: column;
   gap: 10px;
   border-bottom: 1px solid #ccc;
   width: 300px;
-  height: 250px;
+  height: 210px;
   margin: 10px;
   padding: 20px;
   border-radius: 8px;
@@ -30,20 +44,47 @@ div {
   gap: 10px;
 }
 
-input {
+input,
+select,
+textarea {
   height: 20px;
-  outline: blue;
+  outline-color: blue;
   border-radius: 5px;
-  border-color: #ccc;
-  box-shadow: none;
+  border: 1px solid #ccc;	
 }
-div input{
-	max-width: 50%;
-	width: 50%;
+
+input[type="date"] {
+  padding: 1px;
 }
-div:last-child {
+select {
+  width: 100%;
+  padding: 12px;
+}
+textarea {
+  height: 40%;
+}
+div input {
+  max-width: 50%;
+  width: 50%;
+}
+article:nth-child(3) div select {
+  max-width: 50%;
+}
+section > div {
   margin-top: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:first-child {
+  background-color: yellow;
 }
